@@ -1,0 +1,32 @@
+$full-width: 100vw;
+$full-height: 100vh;
+$dark-bg: #000000a8;
+
+@mixin flex-box($contentPosition) {
+    display: flex;
+    justify-content: $contentPosition;
+    align-items: center;
+}
+
+.outer-box {
+    @include flex-box(center);
+    position: absolute;
+    width: $full-width;
+    height: $full-height;
+    background-color: $dark-bg;
+    top: 0;
+    left: 0;
+    z-index: 105
+}
+
+.notifiaction-box {
+    width: 400px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 25px 25px;
+}
+
+.content-area {
+    @include flex-box(center);
+    flex-direction: column;
+}
